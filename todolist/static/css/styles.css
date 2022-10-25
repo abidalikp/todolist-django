@@ -1,0 +1,90 @@
+body {
+  background-color: darkslategray;
+}
+
+main {
+  background-color: darkcyan;
+  margin: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.center {
+  text-align: center;
+}
+
+.heading {
+  background-color: darkcyan;
+  color: white;
+  padding: 1%;
+}
+
+.form1 {
+  background-color: darkturquoise;
+  padding: 2%;
+}
+
+.input-add {
+  padding: 1%;
+  font-size: 0%;
+}
+
+input {
+  width: 50%;
+  padding: 15px;
+  border-color: darkgreen;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 10px;
+  color: white;
+}
+
+.btn-add {
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: green;
+  border-color: darkgreen;
+}
+
+.cmplt-all {
+  padding: 1%;
+}
+
+.btn-dlt-cmplt {
+  background-color: orange;
+  border-color: darkorange;
+}
+
+.btn-dlt-all {
+  background-color: red;
+  border-color: darkred;
+}
+
+.list-group {
+  margin-top: 0%;
+  list-style: none;
+  padding-left: 0%;
+  padding-top: 0%;
+}
+
+.list-item {
+  padding: 2%;
+  font-weight: bolder;
+}
+
+.btn-dlt {
+  align-content: flex-end;
+}
+
+.item-cmplt {
+  text-decoration: line-through;
+  color: white;
+  background-color: orange;
+}

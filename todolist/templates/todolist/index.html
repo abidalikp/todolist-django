@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Todolist App</title>
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    </head>
+    <body>
+        <main>
+          <div class="heading center">
+            <h1>TODO LIST</h1>
+          </div>
+          <div>
+            <div class="form1 center">
+              <form action="{% url 'add' %}" method="POST" role="form">
+                {% csrf_token %}
+                <div class="input-add">
+                  {{ form.text }}
+                  <button type="submit" id="add-btn" class="btn btn-add">ADD</button><br>
+                </div>
+              </form>
+              <div class="cmplt-all">
+                <a href="{% url 'deletecompleted' %}"><button class="btn btn-dlt-cmplt">Delete Completed</button></a>
+                <a href="{% url 'deleteall' %}" ><button class="btn btn-dlt-all">Delete All</button></a>
+              </div>
+            </div>
+            <ul class="list-group center">
+              {% for item in todo_items %}
+              {% if item.completed %}
+              <li class="list-item item-cmplt">{{item}}</li>
+              {% else %}
+              <a href="{% url 'completed' item.id %}"><li class="list-item">{{item}}</li></a>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </main>
+    </body>
+</html>
